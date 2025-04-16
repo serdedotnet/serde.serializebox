@@ -5,5 +5,5 @@ Usually types have both an `ISerializeProvider<T>` and an `ISerialize<T>` implem
 ```C#
 var list = new List<string> { "a", "b", "c" };
 var box = SerializeBox.Create(list, ListProxy.Ser<string, StringProxy>.Instance);
-var result = JsonSerializer.Serialize(box, box);
+var result = JsonSerializer.Serialize(box, box); // pass 'box' twice
 ```
